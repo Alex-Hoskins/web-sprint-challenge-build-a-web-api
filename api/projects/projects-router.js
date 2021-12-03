@@ -7,6 +7,7 @@ const Project = require('./projects-model')
 const { 
     validateId,
     validateProject,
+    validateProjectStrict,
     errorHandling,
   } = require('./projects-middleware')
 const router = express.Router();
@@ -55,6 +56,7 @@ router.put('/:id', validateProject, validateId, (req, res, next) =>{
             next(error)
         })
 })
+
 
 //delete project by id
 router.delete('/:id', validateId, (req, res) =>{
