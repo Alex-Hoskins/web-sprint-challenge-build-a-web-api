@@ -67,7 +67,7 @@ Inside `api/actions/actions-router.js` build endpoints for performing CRUD opera
 
 - [x] `[GET] /api/actions`
   - Returns an array of actions (or an empty array) as the body of the response.
-- [x] `[GET] /api/actions/:id`
+- [] `[GET] /api/actions/:id`
   - Returns an action with the given `id` as the body of the response.
   - If there is no action with the given `id` it responds with a status code 404.
 - [ ] `[POST] /api/actions`
@@ -147,7 +147,20 @@ We have provided test data for all the resources.
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. The core features of Node.js and Express and why they are useful.
+
+  Node.js is a javascript backend environment where web servers can be build and run. 
+
 1. Understand and explain the use of Middleware.
+
+  Middleware can be used to keep our code dry. As we use validation functions, error handling functions, or any other repeatable code we can store it in a middleware file and import it where we need it. This is a time saver!
+
 1. The basic principles of the REST architectural style.
+  A RESTful api abides by the communication rules agreed upon by the world wide web community. When people use the REST architectural style they will format requests and responses that are universally recognizable.
+
 1. Understand and explain the use of Express Routers.
+
+  Routes are a piece of middleware that help us navigate to our endpoint to request the appropriate data. It helps relay the response back to the client.
+
 1. Describe tooling used to manually test the correctness of an API.
+
+  We can use httpie or postman to send requests to an api and verify that the responses we are getting are what we expect. This is helpful because we don't have to have a front end making requests to our api. We can use these tools to quickly make requests and check the endpoints.
